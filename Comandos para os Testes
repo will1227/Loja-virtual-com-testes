@@ -1,0 +1,35 @@
+php artisan test tests/Unit/ProductTest.php
+
+php artisan test tests/Unit/TypeTest.php
+
+
+
+php artisan test tests/Feature/ProductControllerTest.php
+
+php artisan test tests/Feature/TypesControllerTest.php
+
+php artisan test tests/Feature/SuppliersControllerTest.php
+
+
+
+php artisan dusk --filter=RegisterPageTest
+
+php artisan migrate:fresh
+
+php artisan dusk --filter=LoginTest
+
+php artisan dusk --filter=ProductFormTest
+
+php artisan dusk --filter=SupplierFormTest
+
+
+
+
+
+
+
+
+php artisan migrate:fresh
+php artisan serve
+chromedriver --port=9515
+
